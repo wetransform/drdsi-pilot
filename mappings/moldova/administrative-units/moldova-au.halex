@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hale-project version="3.0.0.release">
+    <name>Administrative Units Moldova</name>
+    <author>Thorsten Reitz</author>
+    <description>In this project, we transform Communes from Moldova to INSPIRE AdministrativeUnits.</description>
+    <created>2016-05-30T17:39:05.937+02:00</created>
+    <modified>2016-09-24T19:10:36.325+02:00</modified>
+    <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
+        <setting name="charset">UTF-8</setting>
+        <setting name="projectFiles.separate">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
+        <setting name="target">file:/C:/wetransform/dev/drdsi-pilot/mappings/moldova/administrative-units/moldova-au.halex</setting>
+    </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
+        <setting name="charset">ISO-8859-1</setting>
+        <setting name="resourceId">25ae612f-9033-4ba4-9097-2ac7f05798b7</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/2016-01%20DRDSI/Data%20Moldova/JRC%201rst%20delivery_2/Administrative%20units/20160608/Communes.shp</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/shp">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Communes</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ComuneID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ComuneName</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="4">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">RaioneName</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="5">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">RaionID</hsd:name>
+                    </hsd:entry>
+                    <hsd:entry index="6">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">SatResiden</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Communes</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.instance.model.Instance"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>the_geom</hsd:name>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:propertyType index="3"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RaionID</hsd:name>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:propertyType index="5"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ComuneID</hsd:name>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:propertyType index="1"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>RaioneName</hsd:name>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:propertyType index="4"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ComuneName</hsd:name>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:propertyType index="2"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>SatResiden</hsd:name>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:constraint type="cardinality" value="0..1"/>
+<hsd:propertyType index="6"/>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp/augment">filename</hsd:name>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp/augment">filenameType</hsd:name>
+        <hsd:constraint type="mappable" value="false"/>
+        <hsd:constraint type="has-value" value="true"/>
+        <hsd:constraint type="mapping-relevant" value="false"/>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                    <hsd:type index="1">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ComuneID</hsd:name>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                    </hsd:type>
+                    <hsd:type index="2">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ComuneName</hsd:name>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                    </hsd:type>
+                    <hsd:type index="3">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+                    </hsd:type>
+                    <hsd:type index="4">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">RaioneName</hsd:name>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                    </hsd:type>
+                    <hsd:type index="5">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">RaionID</hsd:name>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="binding" value="java.lang.Integer"/>
+                    </hsd:type>
+                    <hsd:type index="6">
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">SatResiden</hsd:name>
+                        <hsd:constraint type="mappable" value="false"/>
+                        <hsd:constraint type="has-value" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="false"/>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
+        <setting name="onlyElementsMappable">true</setting>
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">809d73a4-19f1-4c27-a441-496573b55301</setting>
+        <setting name="source">http://inspire.ec.europa.eu/schemas/au/4.0/AdministrativeUnits.xsd</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">bff508f3-c8c7-4810-96a9-6974a70bbf37</setting>
+        <setting name="source">file:/C:/wetransform/Box%20Sync/staff/Projects/2016-01%20DRDSI/Data%20Moldova/JRC%201rst%20delivery_2/Administrative%20units/20160608/Communes.shp</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
+        <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}Communes</setting>
+    </resource>
+    <file name="alignment.xml" location="moldova-au.halex.alignment.xml"/>
+    <file name="styles.sld" location="moldova-au.halex.styles.sld"/>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}AdministrativeBoundaryType/1">{http://inspire.ec.europa.eu/schemas/au/4.0}geometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}AdministrativeBoundaryType/2">{http://www.opengis.net/gml/3.2/AbstractCurve}choice</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}AdministrativeBoundaryType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}AdministrativeUnitType/1">{http://inspire.ec.europa.eu/schemas/au/4.0}geometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}AdministrativeUnitType/2">{http://www.opengis.net/gml/3.2}MultiSurface</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}AdministrativeUnitType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}CondominiumType/1">{http://inspire.ec.europa.eu/schemas/au/4.0}geometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}CondominiumType/2">{http://www.opengis.net/gml/3.2}MultiSurface</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}CondominiumType/count">2</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}ResidenceOfAuthorityType/1">{http://inspire.ec.europa.eu/schemas/au/4.0}geometry</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}ResidenceOfAuthorityType/2">{http://www.opengis.net/gml/3.2}Point</property>
+    <property name="defaultGeometry:{http://inspire.ec.europa.eu/schemas/au/4.0}ResidenceOfAuthorityType/count">2</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}Communes/1">the_geom</property>
+    <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}Communes/count">1</property>
+</hale-project>

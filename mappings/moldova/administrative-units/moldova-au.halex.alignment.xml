@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Ccdb1de94-db56-4b03-903d-01a6b39c914b" priority="normal">
+        <source>
+            <class>
+                <type name="Communes" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign.bound" id="C5f8a3c89-c1e9-4c2c-8810-8a7c2d6456f5" priority="normal">
+        <source name="anchor">
+            <property>
+                <type name="Communes" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="RaionID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="country" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Country" ns="http://www.isotc211.org/2005/gmd"/>
+            </property>
+        </target>
+        <parameter value="MD" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C169a4ee0-3422-4464-955f-d719bbd7a76e" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="country" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Country" ns="http://www.isotc211.org/2005/gmd"/>
+                <child name="codeList"/>
+            </property>
+        </target>
+        <parameter value="http://publications.europa.eu/mdr/resource/authority/country/xml/countries.xml" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C77200844-c3b4-4090-a3b2-afee846a794e" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="country" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Country" ns="http://www.isotc211.org/2005/gmd"/>
+                <child name="codeListValue"/>
+            </property>
+        </target>
+        <parameter value="COU0038" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4cdbaa45-b327-43b5-894f-ff17a7bc3375" priority="normal">
+        <source>
+            <property>
+                <type name="Communes" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="geometry" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="MultiSurface" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="true" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.generateuid" id="Ceb0ed7dc-6957-4a09-a87d-10ec9251ad7f" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cae28e963-2d99-4001-a6a7-f40db2b1e308" priority="normal">
+        <source>
+            <property>
+                <type name="Communes" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="ComuneID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C5cf7e466-1d73-401e-b7e1-2d4d739bc675" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="namespace" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="http://arfc.gov.md/inspire/au/comune" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd0994c73-00fc-49c0-846a-6cb803708424" priority="normal">
+        <source>
+            <property>
+                <type name="Communes" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="ComuneName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cda681022-e481-4eaa-ac1b-1d9a42186bde" priority="normal">
+        <source>
+            <property>
+                <type name="Communes" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="ComuneName"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="name" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C80fb1b98-7add-42db-856e-275de947940d" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalCode" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+            </property>
+        </target>
+        <parameter value="Comune" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cec695840-9ce0-45d3-b98d-5e8b4e7e4ec0" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalLevel" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/AdministrativeHierarchyLevel/5thOrder" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C69694393-1403-4a3d-b92f-3ab096d96af1" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Communes" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="RaionID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="upperLevelUnit" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://arfc.gov.md/inspire/au/raion/{RaionID}" name="pattern"/>
+    </cell>
+</alignment>

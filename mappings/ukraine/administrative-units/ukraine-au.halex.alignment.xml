@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C8412739f-0132-4dbd-9497-90b08346673a" priority="normal">
+        <source>
+            <class>
+                <type name="Districts" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cc2cb56b9-1254-4c77-91b3-ff1996e18019" priority="normal">
+        <source>
+            <class>
+                <type name="Settlements" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C3d7923af-135f-4f4e-8d68-4303a4c8a0dd" priority="normal">
+        <source>
+            <class>
+                <type name="Villages_Councils" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb3149e3f-834b-473c-9d77-b1594c13bcd9" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="country" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Country" ns="http://www.isotc211.org/2005/gmd"/>
+            </property>
+        </target>
+        <parameter value="UKR" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cf4b5d8b1-c1b9-420a-8efe-07b12bcd53a3" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="country" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Country" ns="http://www.isotc211.org/2005/gmd"/>
+                <child name="codeList"/>
+            </property>
+        </target>
+        <parameter value="http://publications.europa.eu/mdr/resource/authority/country/xml/countries.xml" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cc24a701c-b30e-4c9f-ac5a-1813908e679c" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="country" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Country" ns="http://www.isotc211.org/2005/gmd"/>
+                <child name="codeListValue"/>
+            </property>
+        </target>
+        <parameter value="COU0056" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C911fdb84-0969-47a3-b051-8b32cea49f48" priority="normal">
+        <source>
+            <property>
+                <type name="Districts" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="geometry" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="MultiSurface" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="true" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3980a380-ba0b-461c-97f5-1f5767bd2589" priority="normal">
+        <source>
+            <property>
+                <type name="Settlements" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="geometry" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="MultiSurface" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="true" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cee0d4151-5cc5-4ee1-955d-d270aa9feed8" priority="normal">
+        <source>
+            <property>
+                <type name="Villages_Councils" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="geometry" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="MultiSurface" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="true" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C43b1872b-f31c-493d-872a-435450af438e" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Districts" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="AdministrativeUnit_{KOATUU}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Ca625fe87-c161-40d3-a09f-d64eb94f977a" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Settlements" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="AdministrativeUnit_6th_{KOATUU}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C37164d29-e1b3-4f52-baf2-5955ca31c535" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Villages_Councils" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="AdministrativeUnit_5th_{KOATUU}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Ccd45dfef-d0d9-4e0e-a8c9-515446ec4c71" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Districts" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="AdministrativeUnit_{KOATUU}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cd7cc11aa-c469-4128-966a-a1a724dc5e88" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Settlements" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="AdministrativeUnit_6th_{KOATUU}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C99ba1f46-6700-427e-8940-2ca40829b034" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Villages_Councils" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="ID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="AdministrativeUnit_5th_{ID}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C482fd38c-493e-4b70-9d7b-b21abf38f9ee" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="namespace" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="httP://www.kmu.gov.ua/inspire/au/" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cc97e8a4a-188a-4bf1-8044-405cace0d3ae" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="language" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="en" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9f6d72d9-6fcd-4592-9469-1691f828cac1" priority="normal">
+        <source>
+            <property>
+                <type name="Districts" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="ENGNAME"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C12995f93-ddef-4f09-a1c5-12bc227f4874" priority="normal">
+        <source>
+            <property>
+                <type name="Settlements" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="NAME_ENG"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cfe138baa-111a-4a8d-b3a7-1709ce904e09" priority="normal">
+        <source>
+            <property>
+                <type name="Villages_Councils" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="NAMEENG"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccbbde661-ec2a-43c8-b427-6fbe7583989c" priority="normal">
+        <source>
+            <property>
+                <type name="Districts" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalCode" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5df2bc6a-e821-4790-9e55-f5b328d1fd57" priority="normal">
+        <source>
+            <property>
+                <type name="Settlements" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalCode" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb3bba8ba-45b0-4bba-bdb6-ef61e329a953" priority="normal">
+        <source>
+            <property>
+                <type name="Villages_Councils" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalCode" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign.bound" id="Cd82fc838-e74e-499c-9478-df4e132f1742" priority="normal">
+        <source name="anchor">
+            <property>
+                <type name="Districts" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalLevel" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/AdministrativeHierarchyLevel/4thOrder" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign.bound" id="C407e4bb3-ec14-4d4f-acdb-4448337cabac" priority="normal">
+        <source name="anchor">
+            <property>
+                <type name="Settlements" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="CODETOPO"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalLevel" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/AdministrativeHierarchyLevel/6thOrder" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign.bound" id="Cce1901ac-1e36-45c1-aa71-9d853eeb9b98" priority="normal">
+        <source name="anchor">
+            <property>
+                <type name="Villages_Councils" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="KOATUU"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalLevel" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/AdministrativeHierarchyLevel/5thOrder" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cab8ca82d-5b21-4b51-b62c-c22e94994060" priority="normal">
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="nationalLevelName" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="LocalisedCharacterString" ns="http://www.isotc211.org/2005/gmd"/>
+            </property>
+        </target>
+        <parameter value="District" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccb9944be-d637-49eb-b6da-a65c22e42450" priority="normal">
+        <source>
+            <property>
+                <type name="Villages_Councils" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="CENTERNAME"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="AdministrativeUnitType" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="residenceOfAuthority" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="ResidenceOfAuthority" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/au/4.0"/>
+                <child name="GeographicalName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="spelling" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="SpellingOfName" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+                <child name="text" ns="http://inspire.ec.europa.eu/schemas/gn/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="structuralRename"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+    </cell>
+</alignment>
