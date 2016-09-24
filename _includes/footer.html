@@ -1,0 +1,16 @@
+<footer>
+  <div>
+    <img src="{{ "/images/welogo-blau.png" | prepend: site.baseUrl }}"  alt="" title="wetransform logo" style="width: 25%"/>
+  </div>
+  <p>This project is maintained by <a href="https://www.wetransform.to">wetransform</a>.</p>
+  <p class="view"><a href="https://github.com/wetransform/inspire-extensions">View the Project on GitHub
+    <small>wetransform/inspire-extensions</small>
+  </a></p>
+</footer>
+<script src="{{ "/javascripts/scale.fix.js" | prepend: site.baseUrl }}"></script>
+
+{% if page.category == "patterns" or page.category == "tutorial" %}
+<script src="{{ "/bower_components/prism/prism.js" | prepend: site.baseUrl }}"></script>
+<script src="{{ "/bower_components/prism/plugins/line-highlight/prism-line-highlight.js" | prepend: site.baseUrl }}"></script>
+<script src="{{ "/bower_components/prism/plugins/line-numbers/prism-line-numbers.js" | prepend: site.baseUrl }}"></script>
+{% endif %}

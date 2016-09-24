@@ -1,0 +1,28 @@
+# Jekyll configuration
+title: Danube Reference Data Service Infrastructure - Data Harmonisation Pilot 
+name: Danube Reference Data Service Infrastructure - Data Harmonisation Pilot 
+description: Documentation and deliverables of the DRDSI data harmonisation project 
+author:
+  name: Thorsten Reitz
+  email: tr@wetransform.to
+
+# Markdown library to use
+markdown: kramdown
+
+exclude:
+  - node_modules
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "models" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "model"
+#  -
+#    scope:
+#      path: "patterns" # an empty string here means all files in the project
+#      type: "posts"
+#    values:
+#      layout: "pattern"

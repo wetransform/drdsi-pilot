@@ -1,0 +1,411 @@
+@font-face {
+    font-family: "PTSans";
+    src: url('../fonts/PTS55F.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PTSans";
+    src: url('../fonts/PTS75F.ttf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "PTSans-Light";
+    src: url('../fonts/PTSansPro-Light/ptsanspro-light.ttf');
+    font-style: normal;
+    font-weight: 300;
+}
+
+body {
+    background-color: #fff;
+    padding: 50px;
+    font: 15px/1.5 "PTSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #727272;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    margin: 0 0 20px;
+}
+
+p, ul, ol, table, pre, dl {
+    margin: 0 0 20px;
+}
+
+h1, h2, h3 {
+    font: "PTSans-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2, h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+    font-style: italic;
+}
+
+h4, h5, h6 {
+    font-size: 16px;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+a {
+    color: #39c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #069;
+}
+
+a small {
+    font-size: 11px;
+    color: #777;
+    margin-top: -0.3em;
+    display: block;
+}
+
+a:hover small {
+    color: #777;
+}
+
+.wrapper {
+    width: 86vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+code, pre {
+    font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+    color: #333;
+    font-size: 12px;
+}
+
+pre {
+    padding: 8px 15px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 5px 10px;
+    border: 0px;
+}
+
+dt {
+    color: #444;
+    font-weight: 700;
+}
+
+th {
+    color: #444;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    width: 270px;
+    float: left;
+    position: fixed;
+    -webkit-font-smoothing: subpixel-antialiased;
+    overflow-y: auto;
+    top: 50px;
+    bottom: 196px;
+}
+
+#toc {
+    width: 95%
+}
+
+#toc > ol {
+    margin-left: .125em
+}
+
+#toc ul.tocLevel1 ul.tocLevel2 {
+    margin: .5em 0
+}
+
+#toc li {
+    line-height: 1.3334;
+    margin-top: .3334em
+}
+
+.tocLevel2 {
+    list-style-type: lower-roman;
+    margin-bottom: 0.25em;
+}
+
+.tocLevel2 li:last-child {
+    margin-bottom: 0.25em;
+}
+
+.flex-col {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 100%;
+    flex-flow: column nowrap;
+}
+
+.flex-grow {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.row-flex-wrap {
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    flex: 0;
+}
+.row-flex, .row-flex > div[class*="col-"] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.important-info {
+    border-radius: 10px;
+}
+
+.important-info-icon {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+blockquote {
+    font-size: 15px;
+    padding: 1em;
+    margin: 0.5em 0.5em 1.0em;
+    border-left: 5px solid #e5e5e5;
+    background-color: #f5f5f5;
+    font-style: italic;
+}
+
+strong {
+    color: #222;
+    font-weight: 700;
+}
+
+header ul a strong {
+    font-size: 15px;
+    display: block;
+    color: #222;
+}
+
+section {
+    max-width: 60em;
+    width: 58vw;
+    margin-left: 270px;
+    float: right;
+    padding-bottom: 50px;
+}
+
+small {
+    font-size: 11px;
+}
+
+hr {
+    border: 0;
+    background: #e5e5e5;
+    height: 1px;
+    margin: 0 0 20px;
+}
+
+footer {
+    width: 270px;
+    position: fixed;
+    float: left;
+    bottom: 50px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.workflow {
+    list-style: none;
+    position: relative;
+}
+
+.workflow > li {
+    border-left: thin solid rgba(128,128,128,.55);
+    padding-left: 10px;
+    margin: 20px 0;
+    counter-increment: item;
+}
+
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.workflow > li::before {
+    position: absolute;
+    margin-right: 1em;
+    content: counter(item);
+    background: #51a1e9;
+    border-radius: 100%;
+    color: #fff;
+    width: 1.6em;
+    height: 1.6em;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.6em;
+    left: 0.25em;
+}
+
+.listPros {
+    list-style: none;
+    padding-left: 25px;
+    position: relative;
+}
+
+.listPros > li::before {
+    position: absolute;
+    content: '+';
+    font-weight: bold;
+    color: darkgreen;
+    display: inline-block;
+    margin-right: 1em;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    left: 0.25em;
+}
+
+.listCons {
+    list-style: none;
+    padding-left: 25px;
+    position: relative;
+}
+
+.listCons > li::before {
+    position: absolute;
+    content: '-';
+    font-weight: bold;
+    color: darkred;
+    display: inline-block;
+    margin-right: 1em;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    left: 0.25em;
+}
+
+@media print, screen and (max-width: 960px) {
+
+    div.wrapper {
+        width: auto;
+        margin: 0;
+    }
+
+    header, section, footer {
+        float: none;
+        position: static;
+        width: auto;
+    }
+
+    header {
+        padding-right: 320px;
+    }
+
+    section {
+        border: 1px solid #e5e5e5;
+        border-width: 1px 0;
+        padding: 20px 0;
+        margin: 0 0 20px;
+    }
+
+    header a small {
+        display: inline;
+    }
+
+    header ul {
+        position: absolute;
+        right: 50px;
+        top: 52px;
+    }
+}
+
+@media print, screen and (max-width: 720px) {
+    body {
+        word-wrap: break-word;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    header ul, header p.view {
+        position: static;
+    }
+
+    pre, code {
+        word-wrap: normal;
+    }
+}
+
+@media print, screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    header ul {
+        width: 99%;
+    }
+
+    header li, header ul li + li + li {
+        width: 33%;
+    }
+}
+
+
+@media print, screen and (min-width: 1700px) {
+    section{
+        width: 45vw;
+    }
+}
+
+@media print {
+    body {
+        padding: 0.4in;
+        font-size: 12pt;
+        color: #444;
+    }
+}
