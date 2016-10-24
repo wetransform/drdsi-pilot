@@ -8,132 +8,120 @@ title:  DRDSI Data Harmonisation Pilot - Analysis Results
 <section>
   <h1><a id="study_intro" class="anchor" href="#mapping" aria-hidden="true"></a>Conceptual Mapping to INSPIRE Data Specifications</h1>
 
-  <p>After the initial analysis, we created conceptual mappings from each of the six selected source data sets to the appropriate INSPIRE GML Application schemas, taking into account the rules set out by the data specifications.</p>
+  <p>After the initial review and analysis of all data sets, we have picked six source data sets and have created conceptual mapping projects using hale studio 3.0.0 for each of these. The documentation for each one is generated using hale studio’s interactive mapping documentation feature, which results in HTML documents like this one:</p>
 
-  <p>As there were no previous mappings like Matching Tables available, we started the mapping from scratch and directly created executable hale studio mappings. The process to create such a mapping is as follows:</p>
 
-  <ol>
-    <li>Map Types: Select source and target types (e.g. tables, classes, documents) and decide which relation they have:
-      <ul>
-        <li>Retype: Create one target object for each source object.</li>
-        <li>Split: Create one or more target objects for each source object.</li>
-        <li>Merge: Create one target object from one or more source objects of the same type.</li>
-        <li>Join: Create one target object from many source objects of different types.</li>
-      </ul>
-    </li>
-  </ol>
-
-  <p>This is an overview of all data sets we have analysed, and those we selected for the pilot project:</p>
-
-  <table class="table table-striped">
-    <tr>
-      <th>Source Theme</th>
-      <th>Moldova</th>
-      <th>Ukraine</th>
-      <th>Selected</th>
-    </tr>
-    <tr>
-      <td>Administrative Units</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Forests</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Hydrography</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Transportation</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Vegetation</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Soil</td>
-      <td>Yes</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Land Cover</td>
-      <td>Yes</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-
-  <p>This table summarizes the individual results per data set. We have used the validation (Schema + TEAM Engine, if appropriate), attribute coverage and analysis tools of <a href="https://www.haleconnect.com/">hale connect</a> to determine these values.</p>
-
-  <table class="table table-striped">
-    <tr>
-      <th width="30%">Source Data Set</th>
-      <th width="15%">Completeness</th>
-      <th width="15%">Consistency</th>
-      <th width="15%">Coverage</th>
-      <th width="25%">Encoding/Others</th>
-    </tr>
-    <tr>
-      <td>Moldova - Communes</td>
-      <td>100%</td>
-      <td>100%</td>
-      <td>100%</td>
-      <td>First delivery had broken encoding, second delivery had correct UTF-8 encoding</td>
-    </tr>
-    <tr>
-      <td>Ukraine - Districts</td>
-      <td>100%</td>
-      <td>100%</td>
-      <td>100%</td>
-      <td>No issues</td>
-    </tr>
-    <tr>
-      <td>Ukraine - Settlements</td>
-      <td>98%</td>
-      <td>100%</td>
-      <td>98%</td>
-      <td>One object was incomplete, missing ENG and KOATUU</td>
-    </tr>
-    <tr>
-      <td>Ukraine - Councils</td>
-      <td>100%</td>
-      <td>100%</td>
-      <td>100%</td>
-      <td>No issues</td>
-    </tr>
-    <tr>
-      <td>Ukraine - Roads</td>
-      <td>25%</td>
-      <td>100%</td>
-      <td>100%</td>
-      <td>Only geometry is available, but classification would also be required.</td>
-    </tr>
-    <tr>
-      <td>Ukraine - Railways</td>
-      <td>75%</td>
-      <td>100%</td>
-      <td>100%</td>
-      <td>The names column is empty, but not mandatory.</td>
-    </tr>
-  </table>
-
-  <p>This is part of an example analysis result, showing the attribute coverage of a given data set. We can quickly see whether any attributes are incomplete, and we can see if there are inconsistencies.</p>
-
-  <div style="margin: 20px">
-    <img src="/images/analysis-attribute-coverage.png" title="Example analysis result for a data set" style="width: 100%; min-width: 400px;">
+  <div style="margin: 20px; text-align: center">
+    <img src="/images/mapping_html.png" title="Mapping HTML Documentation" style="min-width: 300px;">
   </div>
+
+  <p>No major problems were encountered during conceptual mapping.</p>
+
+  <h2>Alignment Projects</h2>
+  <p>Use hale studio 3.0.01 to open and view these projects. They define how to transform a data set from a source format, e.g. a shapefile, to INSPIRE GML.</p>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Project</th>
+      <th>URL</th>
+    </tr>
+    <tr>
+      <td>Moldova Administrative Units</td>
+      <td>Link to Hale Studio File</td>
+    </tr>
+    <tr>
+      <td>Moldova Hydrography</td>
+      <td>Link to Hale Studio File</td>
+    </tr>
+    <tr>
+      <td>Moldova Transport Network - Roads</td>
+      <td>Link to Hale Studio File</td>
+    </tr>
+    <tr>
+      <td>Ukraine Administrative Units</td>
+      <td>Link to Hale Studio File</td>
+    </tr>
+    <tr>
+      <td>Ukraine Hydrography</td>
+      <td>Link to Hale Studio File</td>
+    </tr>
+    <tr>
+      <td>Ukraine Transport Network - Roads</td>
+      <td>Link to Hale Studio File</td>
+    </tr>
+  </table>
+
+
+  <h2>Interactive Documents</h2>
+  <p>Use hale studio 3.0.01 to open and view these projects. They define how to transform a data set from a source format, e.g. a shapefile, to INSPIRE GML.</p>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Project</th>
+      <th>URL</th>
+    </tr>
+    <tr>
+      <td>Moldova Administrative Units</td>
+      <td>Link to HTML File</td>
+    </tr>
+    <tr>
+      <td>Moldova Hydrography</td>
+      <td>Link to HTML File</td>
+    </tr>
+    <tr>
+      <td>Moldova Transport Network - Roads</td>
+      <td>Link to HTML File</td>
+    </tr>
+    <tr>
+      <td>Ukraine Administrative Units</td>
+      <td>Link to HTML File</td>
+    </tr>
+    <tr>
+      <td>Ukraine Hydrography</td>
+      <td>Link to HTML File</td>
+    </tr>
+    <tr>
+      <td>Ukraine Transport Network - Roads</td>
+      <td>Link to HTML File</td>
+    </tr>
+  </table>
+
+
+
+  <h2>Excel Mapping Tables</h2>
+  <p>Use hale studio 3.0.01 to open and view these projects. They define how to transform a data set from a source format, e.g. a shapefile, to INSPIRE GML.</p>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Project</th>
+      <th>URL</th>
+    </tr>
+    <tr>
+      <td>Moldova Administrative Units</td>
+      <td>Link to Excel Mapping Table</td>
+    </tr>
+    <tr>
+      <td>Moldova Hydrography</td>
+      <td>Link to Excel Mapping Table</td>
+    </tr>
+    <tr>
+      <td>Moldova Transport Network - Roads</td>
+      <td>Link to Excel Mapping Table</td>
+    </tr>
+    <tr>
+      <td>Ukraine Administrative Units</td>
+      <td>Link to Excel Mapping Table</td>
+    </tr>
+    <tr>
+      <td>Ukraine Hydrography</td>
+      <td>Link to Excel Mapping Table</td>
+    </tr>
+    <tr>
+      <td>Ukraine Transport Network - Roads</td>
+      <td>Link to Excel Mapping Table</td>
+    </tr>
+  </table>
+
+
 
 </section>
