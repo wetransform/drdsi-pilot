@@ -6,16 +6,22 @@ title:  DRDSI Data Harmonisation Pilot - Analysis Results
 ---
 
 <section>
-  <h1><a id="study_intro" class="anchor" href="#analysis" aria-hidden="true"></a>Analysis and Quality Assessment of Source Data Sets</h1>
+  <h1><a id="study_intro" class="anchor" href="#mapping" aria-hidden="true"></a>Conceptual Mapping to INSPIRE Data Specifications</h1>
 
-  <p>In the analysis phase of the project, we have received seven data sets from Moldova and five data sets from the Ukraine. For all data sets, we performed a quick quality analysis. This analysis included the following checks:</p>
+  <p>After the initial analysis, we created conceptual mappings from each of the six selected source data sets to the appropriate INSPIRE GML Application schemas, taking into account the rules set out by the data specifications.</p>
 
-  <ul>
-    <li>Completeness: Are all fields in the source data filled?</li>
-    <li>Consistency: Are there many inconsistent values, such as overlapping geometries, or different spellings of the same names?</li>
-    <li>Coverage: Can we likely get the minimum required information to fulfill INSPIRE requirements from the source data sets?</li>
-    <li>Encoding: Is the encoding clear and correct?</li>
-  </ul>
+  <p>As there were no previous mappings like Matching Tables available, we started the mapping from scratch and directly created executable hale studio mappings. The process to create such a mapping is as follows:</p>
+
+  <ol>
+    <li>Map Types: Select source and target types (e.g. tables, classes, documents) and decide which relation they have:
+      <ul>
+        <li>Retype: Create one target object for each source object.</li>
+        <li>Split: Create one or more target objects for each source object.</li>
+        <li>Merge: Create one target object from one or more source objects of the same type.</li>
+        <li>Join: Create one target object from many source objects of different types.</li>
+      </ul>
+    </li>
+  </ol>
 
   <p>This is an overview of all data sets we have analysed, and those we selected for the pilot project:</p>
 
